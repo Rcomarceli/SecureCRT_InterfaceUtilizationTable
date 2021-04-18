@@ -1,4 +1,4 @@
-# SecureCRT_InterfaceUtilizationTable
+# What is this?
 This program is currently confirmed to be working on version 6.5.4 of SecureCRT, a SSH client that allows for scripting via VbScript.
 crt.screen commands below interact with the SecureCRT client, mostly telling it to input keys or wait for certain output before continuing.
 Hostnames and Hostname structures have been substituted for security purposes.
