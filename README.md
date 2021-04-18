@@ -6,9 +6,15 @@ Hostnames and Hostname structures have been substituted for security purposes.
 The objective of the program was to:
 - Mostly automate a NOC task where technicians needed to gather transmit and receive utilization percentages for certain hosts and their interfaces for a daily report
 - Be compatiable with *every* NOC engineer's environment without the need to install a coding language or program, as all users lacked install permissions.
+
 For compatiability, I coded this to work with SecureCRT and output the data in a formatted table via printf in a linux environment, as this was the common environment for every NOC engineer. 
+
 For implementation, the program logs into devices, grabs transmit and receive utilizations for certain interfaces, processes that data into percentages, and displays that data in a readable table 
-More specifically, it ssh's into a list of defined hostname and interface pairs, shows interface output and grabs the data via Regex, processes the data, and outputs a printf command that when entered on a Linux server, displays a formatted table of data that looks like below:
+More specifically, it:
+- SSHs over a list of defined hostname and interface pairs
+- Shows interface output and grabs the data via Regex
+- Converts that data into percentages
+- Outputs a printf command that when entered on a Linux server, displays a formatted table of data that looks like below:
 
 ```
 Site1     TB Router 1     TB Router 1     TB Router 2     TB Router 2     Edge Router 1 
