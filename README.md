@@ -9,8 +9,7 @@ The objective of the program was to:
 
 For compatiability, I coded this to work with SecureCRT and output the data in a formatted table via printf in a linux environment, as this was the common environment for every NOC engineer. 
 
-For implementation, the program logs into devices, grabs transmit and receive utilizations for certain interfaces, processes that data into percentages, and displays that data in a readable table 
-More specifically, it:
+For implementation, the program logs into devices, grabs transmit and receive utilizations for certain interfaces, processes that data into percentages, and displays that data in a readable table. More specifically, it:
 - SSHs over a list of defined hostname and interface pairs
 - Shows interface output and grabs the data via Regex
 - Converts that data into percentages
