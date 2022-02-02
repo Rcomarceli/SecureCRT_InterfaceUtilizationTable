@@ -3,11 +3,9 @@ This program is currently confirmed to be working on version 6.5.4 of SecureCRT,
 crt.screen commands below interact with the SecureCRT client, mostly telling it to input keys or wait for certain output before continuing.
 Hostnames and Hostname structures have been substituted for security purposes.
 
-The objective of the program was to:
-- Mostly automate a NOC task where technicians needed to gather transmit and receive utilization percentages for certain hosts and their interfaces for a daily report
-- Be compatiable with *every* NOC engineer's environment without the need to install a coding language or program, as all users lacked install permissions.
+The objective of the program was to mostly automate a NOC task where technicians needed to gather transmit and receive utilization percentages for certain hosts and their interfaces for daily reports.
 
-For compatiability, I coded this to work with SecureCRT and output the data in a formatted table via printf in a linux environment, as this was the common environment for every NOC engineer. 
+For compatiability, I coded this to work with SecureCRT and output the data in a formatted table via printf in a linux environment with no other plugins or requirements needed.
 
 For implementation, the program logs into devices, grabs transmit and receive utilizations for certain interfaces, processes that data into percentages, and displays that data in a readable table. More specifically, it:
 - SSHs over a list of defined hostname and interface pairs
